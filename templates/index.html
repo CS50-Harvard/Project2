@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+  {% block title %}
+    Flack index
+  {% endblock %}
+
+  {% block head %}
+    <script src= "{{ url_for('static', filename='index.js')}}"></script>
+  {% endblock %}
+
+  {% block body %}
+  <nav class="navbar navbar-expand-sm navbar-dark" style="background-color : #3F0E40;">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="http://127.0.0.1:5000/"><span style="color : #f2f2f2;">Flack</span></a>
+      </div>
+    </div>
+  </nav>
+  <div class="flack-home" style="background-color : #909090;">
+    <div class="register">
+      <h3 style="margin-top : 5px;"><center>New User</center></h3>
+      <div class="register-form">
+        <form action="" method="post">
+          <div class="form-group">
+            <input class="form-control register-form-row" name="userid" placeholder="Enter your userid">
+            <input class="form-control register-form-row" name="password" type="password" placeholder="Enter your password">
+            <input class="form-control register-form-row" name="email" placeholder="Enter your email">
+            <input class="form-control register-form-row" name="mobileno" type="number" placeholder="Enter your number">
+            <center><button class="btn btn-success" style="width : 85%; height : 40px;">Create User</button></center>
+          </div>
+          <br/>
+          <center><h6>Need to get your group started on Flack?</h6></center>
+        </form>
+      </div>
+    </div>
+    <div class="flack-info">
+      <h6>WORK FROM HOME</h6>
+      <h1>Flack brings the team together, wherever you are</h1>
+    </div>
+    <div class="login">
+      <h3 style="margin-top : 5px;"><center>Login</center></h3>
+      <div class="login-form">
+        <form action="{{ url_for('home')}}" method="post">
+          <div class="form-group">
+            <input class="form-control login-form-row" id="userid" name="userid" placeholder="Enter your userid">
+            <input class="form-control login-form-row" name="password" type="password" placeholder="Enter your password">
+            <center><button class="btn btn-primary" id="sign-in" style="width : 85%; height : 40px; margin-top : 10px;">Sign In</button></center>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  {% endblock %}

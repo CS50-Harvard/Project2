@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+  {% block title %}
+    Flack index
+  {% endblock %}
+
+  {% block head %}
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+    <script src= "{{ url_for('static', filename='home.js')}}"></script>
+  {% endblock %}
+
+  {% block body %}
+  <nav class="navbar navbar-expand-sm navbar-dark" style="background-color : #3F0E40; padding-left : 0px;">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="http://127.0.0.1:5000/home"><span style="color : #f2f2f2;">Flack</span></a>
+      </div>
+    </div>
+  </nav>
+  <div class="flack-home" style="background-color : white;">
+    <div class="row" style = "height : 100%; color : #f2f2f2;">
+      <div class="col-md-2" style="background-color : #3F0E40;">
+
+        <div class = "row" style="height : 5%;  margin-left : 10px; margin-top : 10px;">
+          <h5>My Channels</h5>
+        </div>
+
+        <div class = "row" style="height : 25%;  margin-left : 10px;">
+          <ul id = "channels" style="list-style-type:none; padding : 0px">
+
+          </ul>
+        </div>
+
+        <div class = "row" style="height : 5%;  margin-left : 10px;">
+          <h5>Browse Channels</h5>
+        </div>
+
+        <div class = "row" style="height : 50%;  margin-left : 10px;">
+          <ul id = "allchannels" style="list-style-type:none; padding : 0px;">
+          </ul>
+        </div>
+
+        <div class = "row" style = "margin-left : 10px;">
+          <input type="text" placeholder="Create a new channel" id="new-channel-name" style = "margin-right : 5%; width : 60%; border-radius : 8px;">
+          <button id="new-channel-btn" class="btn btn-primary">Create</button>
+          </input>
+        </div>
+
+      </div>
+      <div class="col-md-10">
+        <div class = "row" style="height : 86%;  margin-left : 10px;">
+          <ul id="channel-msgs" style="list-style-type:none; padding : 0px;">
+          </ul>
+        </div>
+        <div class = "row" style = "margin-left : 10px;" id="type-message">
+          <input type="text" placeholder="Type a message ..." id="new-msg-text" style = "margin-right : 10px; width : 93%;">
+            <button id="new-msg-btn" class="btn btn-success">Send</button>
+          </input>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  {% endblock %}

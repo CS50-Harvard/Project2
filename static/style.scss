@@ -1,0 +1,111 @@
+//Navigation bar styling
+
+.navbar-brand
+{
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.flack-home
+{
+  height: 48vw;
+}
+
+#sidebar{
+  width : 20%;
+  height : 100%;
+  border : 1px solid black;
+}
+
+.register{
+  margin : 10% 14% 10% 10%;
+  width: 400px;
+  height: 400px;
+  float: right;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+}
+
+.register-form{
+  margin: 15px;
+}
+
+.register-form-row{
+  margin: 25px 10px 30px 10px;
+  margin-left : 2px;
+}
+
+.login{
+  margin : 0% 0% 14% 10%;
+  width: 400px;
+  height: 220px;
+  float: left;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+}
+
+.login-form-row{
+  margin : 10px;
+  width: 95%;
+}
+
+.flack-info
+{
+    width : 400px;
+    margin : 0% 10%;
+    padding : 5% 0%;
+}
+
+#allchannels, #channels{
+  overflow-y:auto;
+  max-height: 80%;
+  overflow-x: hidden;
+}
+
+#allchannels > li,
+#channels > li{
+  width : 420px;
+}
+
+.mychannel:hover{
+  background-color: #1164A3;
+}
+
+.my-channel-msgs-div,
+.channel-msgs-div{
+  height : auto;
+  width : 250px;
+  margin : 15px 15px 35px 0px;
+  background-color: teal;
+  padding-left : 5px;
+  border-radius : 8px;
+}
+
+.my-channel-msgs-div
+{
+  height : auto;
+  width : 250px;
+  margin : 15px 15px 35px 65vw;
+//  float : right;
+  background-color: #007bff;
+  border-radius : 8px;
+  padding-left : 5px;
+}
+
+.msgusername{
+  font-style: italic;
+  font-size : 12px;
+  font-weight: bold;
+  margin-bottom : 5px;
+}
+
+.actualmsg{
+  font-size : 16px;
+  padding-bottom : 10px;
+}
+
+#channel-msgs{
+    max-height: 80%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
